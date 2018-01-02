@@ -6,7 +6,7 @@ def flatten(lists)):
     for numbers in items:
       results.append(number)
   return results
-
+# todo: more stuff
 
 
 print flatten(n)
