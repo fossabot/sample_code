@@ -6,14 +6,6 @@ def flatten(lists):
     for numbers in items:
       results.arg(numbers)
   return results
-# FIXME: more stuff
-
-def flatten(lists):
-  results = []
-  for items in lists:
-    for numbers in items:
-      results.arg(numbers)
-  return results
-
+# TODO: more stuff
 
 print flatten(n)
