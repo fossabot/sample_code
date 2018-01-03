@@ -4,7 +4,7 @@ def flatten(lists):
   results = ['']
   for items in lists:
     for numbers in items:
-      results.append(number)
+      results.append(numbers)
   return results
 # todo: more stuff
 
