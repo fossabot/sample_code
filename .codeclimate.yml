@@ -1,0 +1,12 @@
+plugins:
+  checkstyle:
+    enabled: false
+    config:
+      file: "checkstyle.xml"
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - CUSTOM
