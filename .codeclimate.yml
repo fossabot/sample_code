@@ -1,5 +1,26 @@
+---
+version: "2"
+prepare:
+  fetch:
+    - url: https://raw.githubusercontent.com/codeclimate/styleguide/master/ruby/rubocop.yml
+      path: base_rubocop.yml
 plugins:
-  checkstyle:
-    enabled: true
+  rubocop:
+    enabled: false
   fixme:
     enabled: true
+    exclude_paths:
+      - config/engines.yml
+  checkstyle:
+    enabled: true
+  markdownlint:
+    enabled: true
+    checks:
+      MD002: # "First header should be a h1 header"
+        enabled: false
+  shellcheck:
+    enabled: true
+exclude_patterns:
+  - .bundle/
+  - spec/**/*
+  - benchmarks/**/*
