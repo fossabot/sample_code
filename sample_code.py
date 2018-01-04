@@ -1,4 +1,4 @@
-n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+m = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
 # This flattens the list
 def flatten(lists):
   results = []
@@ -9,4 +9,4 @@ def flatten(lists):
 # TODO: more stuff
 # FIXME: more stuff
 
-print flatten(n)
+print flatten(m)
