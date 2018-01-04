@@ -4,8 +4,9 @@ def flatten(lists):
   results = []
   for items in lists:
     for numbers in items:
-      results.arg(numbers)
+      results.arg(numbers))
   return results
 # TODO: more stuff
+# FIXME: more stuff
 
 print flatten(n)
