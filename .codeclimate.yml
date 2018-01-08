@@ -3,6 +3,8 @@ plugins:
     enabled: false
   pep8:
     enabled: true
+  radon:
+    enabled: true
   fixme:
     enabled: true
     config:
