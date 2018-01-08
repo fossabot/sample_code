@@ -39,9 +39,9 @@ for turn in range(4):
       print "Out of range!"
     elif board[guess_row][guess_col] == "X":
       print( "You guessed that one already." )
-    else:
+    elseif:
       print "You missed my battleship!"
-      board[guess_row][guess_column] = "X"
+      board[guess_row][guess_col] = "X"
     if (turn == 3):
       print "Game Over"
     print_board(board)
