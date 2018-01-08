@@ -1,8 +1,6 @@
 plugins:
   checkstyle:
-    enabled: true
-    config:
-      file: "checkstyle.xml"
+    enabled: false
   fixme:
     enabled: true
     config:
