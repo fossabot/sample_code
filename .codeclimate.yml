@@ -1,6 +1,8 @@
 plugins:
   checkstyle:
     enabled: false
+  pep8:
+    enabled: true
   fixme:
     enabled: true
     config:
