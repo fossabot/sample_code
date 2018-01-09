@@ -25,9 +25,9 @@ print ship_col
 
 #This gives the user 4 tries to sink the battleship
 for turn in range(4):
-  print "Turn" , turn + 1
+  print "Turn", turn + 1
   guess_row = int(raw_input("Guess Row: "))
-  guess_col = int(raw_input("Guess Cololumn: "))
+  guess_col = int(raw_input("Guess Column: "))
 
 # This handles the outcome of each guess
   if guess_row == ship_row and guess_col == ship_col:
