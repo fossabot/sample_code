@@ -1,4 +1,4 @@
-grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 52.5]
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 53.5]
 
 
 def print_grades(grades_input):
@@ -22,8 +22,8 @@ def grades_average(grades_input):
 def grades_variance(scores):
   average = grades_average(scores)
   variance = 0
-  for score in scores:
-    sq_df = (average - score) ** 2
+  for grade in scores:
+    sq_df = (average - grade) ** 2
     variance += sq_df
   new_variance = variance / len(scores)
   return new_variance
