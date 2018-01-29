@@ -23,7 +23,7 @@ def grades_variance(scores):
   average = grades_average(scores)
   variance = 0
   for grade in scores:
-    sq_df = (average - score) ** 2
+    sq_df = (average - grade) ** 2
     variance += sq_df
   new_variance = variance / len(scores)
   return new_variance
