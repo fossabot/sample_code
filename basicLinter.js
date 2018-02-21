@@ -28,7 +28,6 @@ for (let eachWord = 0; eachWord < storyWords.length; eachWord++) {
 }
 
 let sentences = 0;
-
 for (let character = 0; character < story.length; character++) {
   if (story[character] === "." || story[character] === "!" || story[character] === "?") {
     sentences++;
