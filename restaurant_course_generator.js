@@ -58,16 +58,16 @@ const menu = {
 };
 
 menu.addDishToCourse('appetizers', 'Ceasar Salad', 4.25);
-menu.addDishToCourse('appetizers', 'Prawn Coctail', 4.25);
+menu.addDishToCourse('appetizers', 'Prawn Cocktail', 4.25);
 menu.addDishToCourse('appetizers', 'Garlic Bread', 3.50);
 
 menu.addDishToCourse('mains', 'Lasagna', 9.75);
-menu.addDishToCourse('mains', 'Ribeye Steak', 14.95);
+menu.addDishToCourse('mains', 'Chicken Pot Pie', 14.95);
 menu.addDishToCourse('mains', 'Fish & Chips', 12.95);
 
 menu.addDishToCourse('desserts', 'Cheese Cake', 4.50);
-menu.addDishToCourse('desserts', 'Creme Brule', 4.25);
-menu.addDishToCourse('desserts', 'Cheese Board', 3.25);
+menu.addDishToCourse('desserts', 'Iberian Ham', 4.25);
+menu.addDishToCourse('desserts', 'Meat and Cheese Board', 3.25);
 
 let meal = menu.generateRandomMeal();
 
