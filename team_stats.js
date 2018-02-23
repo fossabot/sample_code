@@ -7,31 +7,27 @@ const team = {
   _games: [
     {opponent: "Ben & Jerry's", teamPoints: 10, opponentPoints: 14},
     {opponent: "Time", teamPoints: 51, opponentPoints: 1000},
-    {opponent: "Carelessness", teamPoints: 24, opponentPoints: 22}
+    {opponent: "The Whispers", teamPoints: 24, opponentPoints: 22}
   ],
-
   get games() {
     return this._games;
   },
-
   get players() {
     return this._players;
   },
-
   addPlayer(firstName, lastName, age) {
     let player = {
-      firstName: firstName,
-      lastName: lastName,
-      age: age
+      firstName,
+      lastName,
+      age
     };
     this.players.push(player);
   },
-
   addGame(opponent, teamPoints, opponentPoints) {
     let game = {
-      opponent: opponent,
-      teamPoints: teamPoints,
-      opponentPoints: opponentPoints
+      opponent,
+      teamPoints,
+      opponentPoints
     };
     this.games.push(game);
   },
