@@ -32,6 +32,13 @@ const menu = {
     };
 },
 
+returnGreat(num) {
+  if (num === 5) {
+    return 'This is correct.';
+  }
+  };
+},
+
   addDishToCourse (courseName, dishName, dishPrice) {
     const dish = {
       name: dishName,
