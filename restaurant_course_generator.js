@@ -32,6 +32,13 @@ const menu = {
     };
 },
 
+returnGreat(num) {
+  if (num === 5) {
+    return 'That is a five!';
+  }
+  };
+},
+
   addDishToCourse (courseName, dishName, dishPrice) {
     const dish = {
       name: dishName,
