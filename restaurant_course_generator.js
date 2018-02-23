@@ -34,7 +34,7 @@ const menu = {
 
 returnGreat(num) {
   if (num === 5) {
-    return 'That is a five!';
+    return 'This is correct.';
   }
   };
 },
