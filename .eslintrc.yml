@@ -2,8 +2,7 @@ env:
   browser: true
   node: true
   es6: true
-  jquery: true
-extends: 
+extends:
     - 'eslint:recommended'
     - 'plugin:react/recommended'
 parserOptions:
@@ -18,5 +17,7 @@ rules:
     - error
     - unix
   no-console: 0
-  no-unused-vars: ["error", { "args": "none" }]
+  no-unused-vars: ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   react/prop-types: 0
+  no-debugger: 1
+  react/jsx-equals-spacing: [2, "always"]
