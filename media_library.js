@@ -60,16 +60,31 @@ class Movie extends Media {
   get runTime() {
     return this._runTime;
   }
+  addTrack(track) {
+    this._tracks.push(rating);
+  }
+
 }
 
-let songs = ['Man of Mine', 'Welcome to the Jungle', 'Good Riddance'];
-
-function randomizeSongs(songs) {
-   for (let i = songs.length - 1; i > 0; i--) {
-     let j = Math.floor(Math.random() * (i + 1));
-     let temp = songs[i];
-     songs[i] = songs[j];
-     songs[j] = temp;
-     return songs;
-   }
+class CD extends Media {
+  constructor(title, artist, tracks) {
+    super(title);
+    this._artist = artist;
+    this._tracks = [];
+  }
+  get tracks() {
+    return this._tracks;
+  }
+  get artist() {
+    return this._artist;
+  }
+  randomizeTracks(tracks) {
+    for (let i = tracks.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = tracks[i];
+      tracks[i] = tracks[j];
+      tracks[j] = temp;
+      return tracks;
+    }
+  }
 }
