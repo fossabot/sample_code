@@ -1,0 +1,17 @@
+engines:
+    todofixme:
+        exclude_paths:
+            - 'node_modules/*'
+            - 'vendor/*'
+            - 'storage/*'
+            - '.idea/*'
+    phpcodesniffer:
+        exclude_paths:
+            - 'vendor/*'
+            - 'storage/*'
+            - '_ide_helper.php'
+    eslint:
+        config:
+            extensions:
+                - .js
+                - .jsx
