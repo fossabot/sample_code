@@ -91,3 +91,4 @@ class CD extends Media {
 let cdHoobastank = new CD("Emotional B-b-b-breakdown!", "Hoobastank"]);
 cdHoobastank.addTrack("The Reason");
 cdHoobastank.addTrack("Crawling in the Dark");
+cdHoobastank.addTrack("Out of Control");
