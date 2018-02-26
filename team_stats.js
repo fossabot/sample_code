@@ -5,9 +5,9 @@ const team = {
     {firstName: "Patrick", lastName: "Barsallo", age: 26}
   ],
   _games: [
-    {opponent: "Ben & Jerry's", teamPoints: 10, opponentPoints: 14},
-    {opponent: "Time", teamPoints: 51, opponentPoints: 1000},
-    {opponent: "The Whispers", teamPoints: 24, opponentPoints: 22}
+    {opponent: "The Garys", teamPoints: 10, opponentPoints: 14},
+    {opponent: "Melon Madness", teamPoints: 51, opponentPoints: 1000},
+    {opponent: "Smash Mouth 2", teamPoints: 24, opponentPoints: 22}
   ],
   get games() {
     return this._games;
@@ -33,7 +33,6 @@ const team = {
   },
 };
 
-team.addPlayer("Steph", "Curry", 28);
 team.addPlayer("Bugs", "Bunny", 76);
 team.addGame("Wild Nights", 30, 30);
 team.addGame("Cool Friends", 30, 30);
