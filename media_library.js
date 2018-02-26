@@ -62,26 +62,6 @@ class Movie extends Media {
   }
 }
 
-const historyOfEverything = new Book('A Short History of Nearly Everything', 'Bill Bryson', 544);
-const cdHoobastank = new Book('Hoobastank', 'Bill Tyler', 654);
-const speed = new Movie('Speed', 'Jan de Bont', 116);
-
-historyOfEverything.toggleCheckedOutStatus();
-console.log(historyOfEverything.isCheckedOut);
-historyOfEverything.addRating(4);
-historyOfEverything.addRating(5);
-historyOfEverything.addRating(5);
-historyOfEverything.getAverageRating();
-console.log(historyOfEverything.ratings);
-speed.toggleCheckedOutStatus();
-console.log(speed.isCheckedOut);
-speed.addRating(1);
-speed.addRating(1);
-speed.addRating(5);
-speed.getAverageRating();
-console.log(speed.ratings);
-
-
 let songs = ['Man of Mine', 'Welcome to the Jungle', 'Good Riddance'];
 
 function randomizeSongs(songs) {
@@ -92,6 +72,4 @@ function randomizeSongs(songs) {
      songs[j] = temp;
      return songs;
    }
-};
-
-console.log(randomizeSongs(songs));
+}
