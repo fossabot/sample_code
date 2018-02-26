@@ -75,7 +75,7 @@ class CD extends Media {
     return this._artist;
   }
   addTrack(track) {
-    this._tracks.push(rating);
+    this._tracks.push(track);
   }
   randomizeTracks(tracks) {
     for (let i = tracks.length - 1; i > 0; i--) {
@@ -90,3 +90,4 @@ class CD extends Media {
 
 let cdHoobastank = new CD("Emotional B-b-b-breakdown!", "Hoobastank"]);
 cdHoobastank.addTrack("The Reason");
+cdHoobastank.addTrack("Crawling in the Dark");
