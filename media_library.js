@@ -60,14 +60,10 @@ class Movie extends Media {
   get runTime() {
     return this._runTime;
   }
-  addTrack(track) {
-    this._tracks.push(rating);
-  }
-
 }
 
 class CD extends Media {
-  constructor(title, artist, tracks) {
+  constructor(title, artist) {
     super(title);
     this._artist = artist;
     this._tracks = [];
@@ -77,6 +73,9 @@ class CD extends Media {
   }
   get artist() {
     return this._artist;
+  }
+  addTrack(track) {
+    this._tracks.push(rating);
   }
   randomizeTracks(tracks) {
     for (let i = tracks.length - 1; i > 0; i--) {
@@ -88,3 +87,6 @@ class CD extends Media {
     }
   }
 }
+
+let cdHoobastank = new CD("Emotional B-b-b-breakdown!", "Hoobastank"]);
+cdHoobastank.addTrack("The Reason");
