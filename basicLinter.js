@@ -4,6 +4,8 @@ let overusedWords = ["really", "very", "basically"];
 
 let unnecessaryWords = ["extremely", "literally", "actually"];
 
+let coolWords = ["jazz", "smoking", "EDM"];
+
 let textWords = text.split(" ");
 let betterWords = [];
 
