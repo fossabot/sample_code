@@ -7,13 +7,14 @@ let unnecessaryWords = ["extremely", "literally", "actually"];
 let coolWords = ["jazz", "smoking", "EDM"];
 
 let textWords = text.split(" ");
+let allLowercaseWords = textWords.toLowerCase();
 let betterWords = [];
 
 for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   for (let badWord = 0; badWord < unnecessaryWords.length; badWord++) {
       if (textWords[eachWord] === unnecessaryWords[badWord]) {
         textWords.splice(eachWord, 1);
-      } else if (!betterWords.includes(textWords[eachWord])) {
+        } else if (!betterWords.includes(textWords[eachWord])) {
         betterWords.push(textWords[eachWord]);
   }
   }
@@ -29,6 +30,7 @@ for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   }
 }
 
+
 let sentences = 0;
 for (let character = 0; character < text.length; character++) {
   if (text[character] === "." || text[character] === "!" || text[character] === "?") {
@@ -36,7 +38,10 @@ for (let character = 0; character < text.length; character++) {
   }
 }
 
+let newStory = betterWords.join(" ");
+
 console.log("The text contains " + textWords.length + " words")
 console.log("There are " + wordCount + " instances of overused words");
 console.log("There are " + sentences + " sentences");
 console.log(betterWords.join(" "));
+console.log(newStory);
