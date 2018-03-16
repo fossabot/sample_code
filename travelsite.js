@@ -25,7 +25,7 @@ async function getVenues() {
     let response = await fetch(urlToFetch);
     if(response.ok) {
       let jsonResponse = await response.json();
-      return venues;
+      let venues = jsonResponse.groups[0];
     }
     throw new Error('Request failed!');
   }
