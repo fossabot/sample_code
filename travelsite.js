@@ -25,7 +25,6 @@ async function getVenues() {
     let response = await fetch(urlToFetch);
     if(response.ok) {
       let jsonResponse = await response.json();
-      let venues = jsonResponse.response.groups[0].items.map(item => item.venue);
       return venues;
     }
     throw new Error('Request failed!');
