@@ -1,0 +1,19 @@
+{
+  "name": "sample_code",
+  "version": "1.0.0",
+  "description": "This is a test.",
+  "main": "basicLinter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danMateer/sample_code.git"
+  },
+  "author": "Dan Mateer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danMateer/sample_code/issues"
+  },
+  "homepage": "https://github.com/danMateer/sample_code#readme"
+}
