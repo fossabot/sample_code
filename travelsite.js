@@ -27,7 +27,7 @@ async function getVenues() {
       let jsonResponse = await response.json();
       let venues = jsonResponse.groups[0];
     }
-    throw new Error('Request failed!');
+    throw new Error('getVenues failed!');
   }
   catch(error){
     console.log(error);
