@@ -27,7 +27,7 @@ async function getVenues() {
       let jsonResponse = await response.json();
       let venues = jsonResponse.groups[0];
     }
-    throw new Error('getVenues failed!');
+    throw new Error('"getVenues" failed!');
   }
   catch(error){
     console.log(error);
@@ -38,7 +38,7 @@ async function getVenues() {
 function renderVenues(venues) {
   $venueDivs.forEach(($venue, index) => {
     let venueContent =
-      '<h2>' + venues[index].name + '</h2>' +
+      '<h1>' + venues[index].name + '</h1>' +
       '<img class="venueimage" src="' + imgPrefix +
       '<img suffix>' + '"/>' +
       '<h3>Address:</h3>' +
