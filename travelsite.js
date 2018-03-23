@@ -72,4 +72,4 @@ function executeSearch() {
   return false;
 }
 
-$submit.click(executeSearch)
+$submit.click(executeSearch);
