@@ -3,6 +3,7 @@ const clientId = '0ELXT5QNIINNQ0RELGUBNMDAMFTNBODOJYODCDP4KVCOV3ED';
 const clientSecret = 'QTLDT241W3O0VWNQALEWOGMXLI34WNHX41GYGKQJUYSQSYKK';
 const url = 'GET https://api.foursquare.com/v2/venues/explore?near=';
 const imgPrefix = 'https://igx.4sqi.net/img/general/150x200';
+let clientIdVerified = false;
 
 // APIXU Info
 const apiKey = '';
@@ -26,6 +27,7 @@ async function getVenues() {
     if(response.ok) {
       let jsonResponse = await response.json();
       let venues = jsonResponse.groups[0];
+      let clientIdVerified = true;
     }
     throw new Error('"getVenues" failed!');
   }
