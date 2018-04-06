@@ -5,7 +5,7 @@ const url = 'GET https://api.foursquare.com/v2/venues/explore?near=';
 const imgPrefix = 'https://igx.4sqi.net/img/general/150x200';
 let clientIdVerified = false;
 
-// APIXU Info
+// TODO: APIXU Info
 const apiKey = '';
 const forecastUrl = '';
 
@@ -16,7 +16,7 @@ const $destination = $('#destination');
 const $container = $('.container');
 const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weather4")];
-const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 // AJAX functions
 async function getVenues() {
