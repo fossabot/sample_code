@@ -4,7 +4,7 @@ let overusedWords = ["really", "very", "basically"];
 
 let unnecessaryWords = ["extremely", "literally", "actually"];
 
-let coolWords = ["jazz", "smoking", "EDM", "Bodacious", "vertical"];
+let coolWords = ["jazz", "smoking", "EDM", "Bodacious", "vertical", "Polly"];
 
 let textWords = text.split(" ");
 let allLowercaseWords = textWords.toLowerCase();
