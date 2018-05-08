@@ -20,7 +20,7 @@ const team = {
       firstName,
       lastName,
       age,
-      rank
+      positions
     };
     this.players.push(player);
   },
