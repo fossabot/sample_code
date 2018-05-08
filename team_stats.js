@@ -15,11 +15,12 @@ const team = {
   get players() {
     return this._players;
   },
-  addPlayer(firstName, lastName, age) {
+  addPlayer(firstName, lastName, age, position) {
     let player = {
       firstName,
       lastName,
-      age
+      age,
+      position
     };
     this.players.push(player);
   },
