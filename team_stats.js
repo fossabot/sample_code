@@ -19,7 +19,8 @@ const team = {
     let player = {
       firstName,
       lastName,
-      age
+      age,
+      position
     };
     this.players.push(player);
   },
