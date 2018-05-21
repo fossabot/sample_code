@@ -5,11 +5,10 @@ const url = 'GET https://api.foursquare.com/v2/venues/explore?near=';
 const imgPrefix = 'https://igx.4sqi.net/img/general/150x200';
 let clientIdVerified = false;
 
-// TODO: APIXU Info
 const apiKey = '';
 const forecastUrl = '';
 
-// Page Elements
+// Page elements
 const $input = $('#city');
 const $submit = $('#button');
 const $destination = $('#destination');
@@ -41,12 +40,12 @@ function renderVenues(venues) {
   $venueDivs.forEach(($venue, index) => {
     let venueContent =
       '<h1>' + venues[index].name + '</h1>' +
-      '<img class="venueimage" src="' + imgPrefix +
+      '<img class="venueImage" src="' + imgPrefix +
       '<img suffix>' + '"/>' +
       '<h3>Address:</h3>' +
-      '<p>' + '<address>' + '</p>' +
-      '<p>' + '<city>' + '</p>' +
-      '<p>' + '<country>' + '</p>';
+      '<p class="address">' + '<address>' + '</p>' +
+      '<p class="city">' + '<city>' + '</p>' +
+      '<p class="country">' + '<country>' + '</p>';
     $venue.append(venueContent);
   });
   $destination.append('<h2>' + venues[0].location.city + '</h2>');
