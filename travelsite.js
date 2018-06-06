@@ -48,7 +48,7 @@ function renderVenues(venues) {
       '<p class="country">' + '<country>' + '</p>';
     $venue.append(venueContent);
   });
-  $destination.append('<h2>' + venues[0].location.city + '</h2>');
+  $destination.append('<h3>' + venues[0].location.city + '</h3>');
 }
 
 function renderForecast(days) {
