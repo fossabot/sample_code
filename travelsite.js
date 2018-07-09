@@ -36,7 +36,7 @@ async function getVenues() {
 }
 
 // Render functions
-function renderVenues(venues) {
+function venues(venues) {
   $venueDivs.forEach(($venue, index) => {
     let venueContent =
       '<h1>' + venues[index].name + '</h1>' +
