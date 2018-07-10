@@ -38,6 +38,7 @@ for (let character = 0; character < text.length; character++) {
 
 let newStory = betterWords.join(" ");
 
+// Adding comment
 console.log("The text contains " + textWords.length + " words")
 console.log("There are " + wordCount + " instances of overused words");
 console.log("There are " + sentences + " sentences");
