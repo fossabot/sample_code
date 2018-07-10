@@ -18,6 +18,7 @@ const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weathe
 const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 // AJAX functions
+
 async function getVenues() {
   const city = $input.val();
   const urlToFetch = `${url}${city}&venuePhotos=1&limit=4&client_id=${clientId}&client_secret=${clientSecret}&v=${getCurrentDate()}`;
