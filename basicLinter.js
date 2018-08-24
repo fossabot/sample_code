@@ -9,7 +9,7 @@ let allLowercaseWords = textWords.toLowerCase();
 let betterWords = [];
 
 // Testing
-
+// Testing
 for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   for (let badWord = 0; badWord < unnecessaryWords.length; badWord++) {
       if (textWords[eachWord] === unnecessaryWords[badWord]) {
