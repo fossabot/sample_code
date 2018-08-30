@@ -13,7 +13,7 @@ class billpersona extends slackbot{
 			'_post_waki_how' => 'Pattern: waki OR waki <How...> OR How <...>. Posts a helpful how-to guide on a random subject or one queried.'
 		);
 	}
-	// Command callbacks
+
 	protected function _bad_command($args = array()){
 		$_POST['func_args'] = $args;
 		$this->respond(json_encode($_POST));
