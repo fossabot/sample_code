@@ -19,7 +19,7 @@ export class Input extends React.Component {
       <div>
         <input type="text" onChange={this.handleUserInput} value={this.state.userInput} />
         <h1>{this.state.userInput}</h1>
-        <p>Changes are auto-saved</p>
+        <p width="100%">Changes are auto-saved</p>
       </div>
     );
   }
