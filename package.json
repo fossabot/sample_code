@@ -1,19 +1,53 @@
 {
   "name": "sample_code",
+  "description": "dan sample",
   "version": "1.0.0",
-  "description": "This is a test.",
-  "main": "basicLinter.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "./src/index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danMateer/sample_code.git"
+    "url": ""
   },
-  "author": "Dan Mateer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danMateer/sample_code/issues"
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "nyc --reporter=html --reporter=text mocha src/tests"
   },
-  "homepage": "https://github.com/danMateer/sample_code#readme"
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "csvtojson": "^1.1.7",
+    "express": "^4.15.3",
+    "express-session": "^1.15.5",
+    "express-validation": "^1.0.2",
+    "html-pdf": "^2.2.0",
+    "http-status": "^1.0.1",
+    "hydra": "^1.4.12",
+    "hydra-express": "^1.4.17",
+    "hydra-express-plugin": "^0.0.1",
+    "joi": "^10.6.0",
+    "joi-password-complexity": "^2.0.1",
+    "jsonwebtoken": "^8.0.1",
+    "lodash": "^4.17.4",
+    "mime": "^2.3.1",
+    "mongoose": "^4.11.5",
+    "mongoose-timestamp": "^0.6.0",
+    "ms": "^2.0.0",
+    "nunjucks": "^3.0.1",
+    "object-mapper": "^5.0.0",
+    "optunli-common": "git+ssh://git@bitbucket.org:vennpoint/optunli-backend-common.git",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
+    "passport-linkedin": "^1.0.0",
+    "request": "^2.85.0",
+    "striptags": "^3.1.1",
+    "textract": "^2.2.0",
+    "uuid": "^3.1.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "proxyquire": "^2.0.1",
+    "supertest": "^3.0.0"
+  }
 }
