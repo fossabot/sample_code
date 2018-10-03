@@ -35,7 +35,7 @@
     "optunli-common": "git+ssh://git@bitbucket.org:vennpoint/optunli-backend-common.git#v0.0.0",
     "paginate-array": "^2.0.0",
     "passport": "^0.4.0",
-    "passport-jwt": "^3.0.0",
+    "passport-jwt": "^4.0.0",
     "passport-linkedin": "^1.0.0",
     "winston": "^2.3.1"
   },
