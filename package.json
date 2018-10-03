@@ -9,7 +9,9 @@
     "url": "https://github.com/danMateer/sample_code.git"
   },
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bcrypt": "^3.0.0",
@@ -33,6 +35,8 @@
     "request-ip": "^2.0.2",
     "useragent": "^2.3.0",
     "uuid": "^3.1.0",
-    "winston": "^2.3.1"
-  }
+    "winston": "^2.3.1",
+    "snyk": "^1.100.1"
+  },
+  "snyk": true
 }
