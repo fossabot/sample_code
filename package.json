@@ -10,7 +10,9 @@
   },
   "scripts": {
     "start": "node ./src/index.js",
-    "test": "nyc --reporter=html --reporter=text mocha src/tests"
+    "test": "nyc --reporter=html --reporter=text mocha src/tests",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -41,7 +43,8 @@
     "striptags": "^3.1.1",
     "textract": "^2.2.0",
     "uuid": "^3.1.0",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "snyk": "^1.100.1"
   },
   "devDependencies": {
     "chai": "^4.1.1",
@@ -49,5 +52,6 @@
     "nyc": "^12.0.2",
     "proxyquire": "^2.0.1",
     "supertest": "^3.0.0"
-  }
+  },
+  "snyk": true
 }
