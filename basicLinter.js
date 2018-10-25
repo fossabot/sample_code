@@ -2,7 +2,7 @@ let text = "Last weekend, I took literally the most beautiful bike ride of my li
 
 let overusedWords = ["really", "very", "basically"];
 let unnecessaryWords = ["extremely", "literally", "actually"];
-let coolWords = ["jazz", "smoking", "EDM", "Bodacious", "vertical"];
+let coolWords = ["jazz"];
 
 let textWords = text.split(" ");
 let allLowercaseWords = textWords.toLowerCase();
