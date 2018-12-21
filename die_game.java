@@ -89,38 +89,4 @@ public class Die
     {   return iMyResult;   }
 
 
-    /**
-     * returns true if this Die and the parameter otherObj are equal<p>
-     * pre: none<br>
-     * post: return true if the parameter is a Die object with the same number of sides as this Die and currently has the same result.
-     * @return true if the the two Dice are equal, false otherwise
-     */
-    public boolean equals(Object otherObj)
-    {   boolean result = true;
-        if(otherObj == null)
-            result = false;
-        else if(this == otherObj)
-            result = true;
-        else if(this.getClass() != otherObj.getClass())
-            result = false;
-        else
-        {   Die otherDie = (Die)otherObj;
-            result = this.iMyResult == otherDie.iMyResult
-                && this.iMyNumSides == otherDie.iMyNumSides;
-        }
-        return result;
-    }
-
-
-    /**
-     * returns a String containing information about this Die<p>
-     * pre: none<br>
-     * post: return a String with information about the current state of this Die
-     * @return: A String with the number of sides and current result of this Die
-     */
-    public String toString()
-    {   return "Num sides " + getNumSides() + " result " + getResult();
-    }
-
-
 }// end of Die class
