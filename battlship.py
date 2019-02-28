@@ -21,12 +21,6 @@ ship_col = random_col(board)
 print ship_row
 print ship_col
 
-#This gives the user 4 tries to sink the battleship
-for turn in range(4):
-  print "Turn", turn + 1
-  guess_row = int(raw_input("Enter latitude (1-4): "))
-  guess_col = int(raw_input("Enter longitude (1-4): "))
-
 # This handles the outcome of each guess
   if guess_row == ship_row and guess_col == ship_col:
     print "WINNER! You sank my battleship!"
