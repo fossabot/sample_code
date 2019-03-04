@@ -8,8 +8,6 @@ def print_board(board):
 # Added another line
 # Added a third line
 
-print_board(board)
-
 def random_row(board):
   return randint(0, len(board) - 1)
 
