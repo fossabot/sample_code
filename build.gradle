@@ -1,3 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.7
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.squareup.okhttp:okhttp:2.2.0'
@@ -9,4 +15,16 @@ dependencies {
     implementation 'io.reactivex:rxjava:1.0.5'
     implementation 'io.reactivex:rxjava:1.1.7'
     implementation 'junit:junit:4.12'
-    testImplementation "io.mockk:mockk:1.9.kotlin12"
+
+    testImplementation 'com.squareup.okhttp:mockwebserver:2.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+// Known Issue: http://tools.android.com/knownissues#TOC-JUnit-tests-missing-resources-in-classpath-when-run-from-Studio
+// https://code.google.com/p/android/issues/detail?id=64887#c13
+// Issue with building unit tests with Resources on libraries within Android Studio 1.4 (and below)
+task copyTestResources(type: Copy) {
+    from "${projectDir}/src/test/resources"
+    into "${buildDir}/classes/test"
+}
+processTestResources.dependsOn copyTestResources
