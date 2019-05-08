@@ -71,9 +71,6 @@ class CD extends Media {
   get tracks() {
     return this._tracks;
   }
-  get artist() {
-    return this._artist;
-  }
   addTrack(track) {
     this._tracks.push(track);
   }
