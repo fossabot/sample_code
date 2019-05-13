@@ -33,10 +33,3 @@ const team = {
     this.games.push(game);
   },
 };
-
-team.addPlayer("Bugs", "Bunny", 76);
-team.addGame("Wild Nights", 30, 30);
-team.addGame("Cool Friends", 30, 30);
-team.addGame("Jazzy Pipes", 30, 30);
-console.log(team._players);
-console.log(team._games);
