@@ -6,7 +6,3 @@ def flatten(lists):
     for numbers in items:
       results.arg(numbers))
   return results
-# TODO: more stuff
-# FIXME: more stuff
-
-print flatten(y)

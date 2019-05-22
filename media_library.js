@@ -10,13 +10,6 @@ class Media {
   get isCheckedOut() {
     return this._isCheckedOut;
   }
-  get ratings() {
-    return this._ratings;
-  }
-
-  toggleCheckedOutStatus() {
-    this._isCheckedOut = !this._isCheckedOut;
-  }
 
   getAverageRating() {
     let numberOfRatings = this._ratings.length;
