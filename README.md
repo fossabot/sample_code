@@ -1,7 +1,5 @@
 # sample_code
-For testing.
-
-
+See:
 ```
 print 'Hello world!'
 ```
