@@ -3,5 +3,5 @@ For testing.
 
 
 ```
-Hello world!
+console.log('Hello world!');
 ```
