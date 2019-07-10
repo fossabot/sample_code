@@ -1,170 +1,245 @@
-# frozen_string_literal: true
-########################################################################
-# infra
-gem "health_check", "~> 3.0"
-gem "puma", "= 3.6.2"
-gem "rails", "~> 5.2.3"
-# In memory storage
-gem "actionpack-page_caching", "~> 1.1", ">= 1.1.1"
-gem "hiredis", "~> 0.6.1" # Redis.new(driver: :hiredis) to speed up
-gem "redis", "~> 4.1"
-# Use ActiveModel has_secure_password
-gem "bcrypt", "~> 3.1.7"
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.0"
-# Ensure net/https uses OpenSSL::SSL::VERIFY_PEER to verify SSL certificates and provides certificate bundle in case OpenSSL cannot find one
-gem "certified"
-# Boot large ruby/rails apps faster
-gem "bootsnap", require: false
-# Needed for delayed_job
-gem "daemons", "~> 1.2.2"
-########################################################################
-# database
-gem "activerecord-import"
-gem "activerecord-postgis-adapter", "~> 5.2.2"
-gem "dynamoid", "~> 3.1.0"
-gem "geokit-rails", "~> 2.3.1"
-gem "migration_comments"
-gem "pg", "0.18.4"
-gem "rein" # DB level validations
-########################################################################
-# model
-gem "acts_as_list"
-gem "date_validator"
-gem "fast_blank" # C extension which provides a fast implementation of Active Support's String#blank?
-gem "nilify_blanks", ">= 1.2.1"
-gem "virtus", "~> 1.0.5"
-########################################################################
-# view
-gem "bootstrap-sass", ">= 3.4.1"
-gem "bootstrap3-datetimepicker-rails", "~> 4.15.35"
-gem "coffee-rails", ">= 4.1.0"
-gem "google_static_maps_helper"
-gem "jquery-rails", ">= 4.0.4"
-gem "momentjs-rails", ">= 2.9.0" # bootstrap datetimepicker
-gem "rails-ujs"
-gem "sass-rails", ">= 5.0.6"
-gem "uglifier", ">= 1.3.0"
-########################################################################
-# website
-gem "hashids", "~> 1.0", ">= 1.0.2"
-gem "sitemap_generator", "~> 6.0.2"
-########################################################################
-# business
-gem "quickbooks-ruby", "~> 0.6"
-gem "routific"
-gem "stripe", ">= 2.0.3"
-gem "twilio-ruby", "~> 4.0.0"
-########################################################################
-# developing
-gem "sentry-raven"
-########################################################################
-# tooling
-gem "alchemist", "~> 0.1.7"
-gem "awesome_print", "~> 1.6", ">= 1.6.1", require: "ap"
-gem "binding_of_caller", "~> 0.8"
-gem "bluecloth", "~> 2.2.0" # render markdown
-gem "decent_exposure", "3.0.0"
-gem "httparty"
-gem "maxminddb", "~> 0.1.8" # The MaxMind DB file format is a database format that maps IPv4 and IPv6 addresses to data records using an efficient binary search tree.
-gem "nori" # XML parser
-gem "pagy", "~> 0.22.0" # pagination
-gem "rest-client", "~> 1.8.0"
-gem "rubocop"
-gem "rubocop-performance"
-gem "rubocop-rails_config"
-gem "rubocop-rspec"
-gem "tod", "~> 2.1.1" # Time of day and shift types for Ruby
-gem "verbs" # convert word in past tense
-########################################################################
-# image uploading
-gem "aws-sdk-cloudwatch", "~> 1"
-gem "aws-sdk-rails", "~> 2"
-gem "aws-sdk-s3"
-gem "aws-sdk-sns", "~> 1"
-gem "aws-sdk-sqs", "~> 1.10"
-gem "carrierwave"
-gem "carrierwave-base64"
-gem "fog-aws"
-gem "mini_magick", "~> 4.8"
-########################################################################
-# admin
-gem "activeadmin"
-gem "activeadmin-ajax_filter"
-gem "activeadmin_reorderable"
-gem "analytics-ruby", "~> 2.0.0", require: "segment/analytics"
-gem "blazer", ">= 1.8"
-gem "devise", ">= 4.6.0"
-gem "rails_email_preview", "~> 2.0.1"
-########################################################################
-# API
-gem "active_model_serializers", "~> 0.10.0"
-gem "jwt"
-########################################################################
-# async worker
-gem "delayed_job_active_record", "~> 4.1.2"
-gem "responders", "~> 2.0"
-# Simple, efficient background processing for Ruby
-gem "sidekiq", "~> 5.2"
-gem "sidekiq-cron", "~> 1.1"
-gem "sidekiq-failures", "~> 1.0"
-# debug tooling
-gem "scout_apm", "~> 3.0.x"
-# CORS
-gem "rack-cors", "~> 1.0"
-group :development do
-  gem "better_errors", "~> 2.1", ">= 2.1.1"
-  gem "guard-rspec", "~> 4.6.4", require: false
-  gem "listen", "~> 3.0.4"
-  gem "web-console", "~> 3.0" # Access an IRB console on exception pages or by using <%= console %> in views
-  # Documentation
-  gem "guard-yard"
-  gem "yard"
-  # Annotate Rails classes with schema and routes info
-  gem "annotate"
-  gem "bullet"
-  # RubyGems API
-  gem "gems", "~> 1.1", ">= 1.1.1"
-end
-# rails testing
-group :test do
-  gem "database_cleaner", "~> 1.6"
-  gem "factory_bot_rails", "~> 4.8", ">= 4.8.2"
-  gem "faker", "~> 1.8", ">= 1.8.7"
-  gem "fuubar", "~> 2.0.0" # RSpec formatter
-  gem "rails-controller-testing"
-  gem "rspec-parameterized"
-  gem "shoulda-matchers"
-  gem "simplecov", require: false
-  # WebMock allows stubbing HTTP requests and setting expectations on HTTP requests.
-  gem "webmock", "~> 3.3"
-end
-group :development, :test do
-  gem "byebug"
-  gem "pry"
-  gem "pry-byebug", "~> 3.4"
-  gem "pry-rails"
-  gem "rspec-collection_matchers"
-  gem "rspec-rails", "~> 3.5" # needed in development to make rake spec work
-  # Tooling
-  gem "solargraph"
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring"
-  gem "spring-commands-rspec"
-  # mock the stripe API
-  gem "stripe-ruby-mock", "~> 2.5.5", require: "stripe_mock"
-  # A tool to manage and configure Git hooks
-  gem "overcommit"
-  # manipulate time in tests
-  gem "timecop"
-  # profiling
-  gem "rblineprof"
-  gem "parallel_tests"
-  gem "zeus-parallel_tests"
-end
-group :production do
-  # metrics & analysis
-  gem "ddtrace", ">= 0.21" # Datadog APM client library
-end
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.3.3)
+    activesupport (4.2.7.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    babosa (1.0.2)
+    cert (1.4.4)
+      fastlane_core (>= 0.55.0, < 1.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+    claide (1.0.1)
+    colored (1.2)
+    commander (4.4.0)
+      highline (~> 1.7.2)
+    credentials_manager (0.16.2)
+      colored
+      commander (>= 4.3.5)
+      highline (>= 1.7.1)
+      security
+    deliver (1.15.0)
+      credentials_manager (>= 0.16.2, < 1.0.0)
+      fastimage (~> 1.6)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      plist (>= 3.1.0, < 4.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+    domain_name (0.5.20161021)
+      unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.1.1)
+    excon (0.54.0)
+    faraday (0.10.0)
+      multipart-post (>= 1.2, < 3)
+    faraday-cookie_jar (0.0.6)
+      faraday (>= 0.7.4)
+      http-cookie (~> 1.0.0)
+    faraday_middleware (0.10.1)
+      faraday (>= 0.7.4, < 1.0)
+    fastimage (1.6.8)
+      addressable (~> 2.3, >= 2.3.5)
+    fastlane (1.108.0)
+      activesupport (< 5)
+      addressable (>= 2.3, < 3.0.0)
+      bundler (~> 1.12)
+      cert (>= 1.4.4, < 2.0.0)
+      credentials_manager (>= 0.16.2, < 1.0.0)
+      deliver (>= 1.15.0, < 2.0.0)
+      fastlane_core (>= 0.55.0, < 1.0.0)
+      frameit (>= 3.0.0, < 4.0.0)
+      gym (>= 1.12.0, < 2.0.0)
+      krausefx-shenzhen (>= 0.14.11, < 1.0.0)
+      match (>= 0.11.0, < 1.0.0)
+      multipart-post (~> 2.0.0)
+      pem (>= 1.4.0, < 2.0.0)
+      pilot (>= 1.12.0, < 2.0.0)
+      plist (>= 3.1.0, < 4.0.0)
+      produce (>= 1.3.0, < 2.0.0)
+      scan (>= 0.14.1, < 1.0.0)
+      screengrab (>= 0.5.2, < 1.0.0)
+      sigh (>= 1.11.2, < 2.0.0)
+      slack-notifier (>= 1.3, < 2.0.0)
+      snapshot (>= 1.16.3, < 2.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+      supply (>= 0.7.1, < 1.0.0)
+      terminal-notifier (>= 1.6.2, < 2.0.0)
+      terminal-table (>= 1.4.5, < 2.0.0)
+      word_wrap (~> 1.0.0)
+      xcode-install (~> 2.0.0)
+      xcodeproj (>= 0.20, < 2.0.0)
+      xcpretty (>= 0.2.4, < 1.0.0)
+    fastlane_core (0.55.0)
+      babosa
+      colored
+      commander (>= 4.4.0, <= 5.0.0)
+      credentials_manager (>= 0.16.2, < 1.0.0)
+      excon (>= 0.45.0, < 1.0)
+      gh_inspector (>= 1.0.1, < 2.0.0)
+      highline (>= 1.7.2)
+      json
+      multi_json
+      plist (>= 3.1.0, < 4.0.0)
+      rubyzip (~> 1.1.6)
+      terminal-table (>= 1.4.5, < 2.0.0)
+    frameit (3.0.0)
+      deliver (> 0.3)
+      fastimage (~> 1.6.3)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      mini_magick (~> 4.5.1)
+    gh_inspector (1.0.2)
+    google-api-client (0.9.20)
+      addressable (~> 2.3)
+      googleauth (~> 0.5)
+      httpclient (~> 2.7)
+      hurley (~> 0.1)
+      memoist (~> 0.11)
+      mime-types (>= 1.6)
+      representable (~> 2.3.0)
+      retriable (~> 2.0)
+    googleauth (0.5.1)
+      faraday (~> 0.9)
+      jwt (~> 1.4)
+      logging (~> 2.0)
+      memoist (~> 0.12)
+      multi_json (~> 1.11)
+      os (~> 0.9)
+      signet (~> 0.7)
+    gym (1.12.0)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      plist (>= 3.1.0, < 4.0.0)
+      rubyzip (>= 1.1.7)
+      terminal-table (>= 1.4.5, < 2.0.0)
+      xcpretty (>= 0.2.4, < 1.0.0)
+    highline (1.7.8)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    httpclient (2.8.2.4)
+    hurley (0.2)
+    i18n (0.7.0)
+    json (1.8.3)
+    jwt (1.5.6)
+    krausefx-shenzhen (0.14.11)
+      commander (>= 4.3, < 5.0)
+      dotenv (>= 0.7)
+      faraday (~> 0.9)
+      faraday_middleware (~> 0.9)
+      highline (>= 1.7.2)
+      json (~> 1.8)
+      net-sftp (~> 2.1.2)
+      plist (>= 3.1.0, < 4.0.0)
+      rubyzip (~> 1.1)
+      security (~> 0.1.3)
+      terminal-table (~> 1.4.5)
+    little-plugger (1.1.4)
+    logging (2.1.0)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    match (0.11.0)
+      cert (>= 1.4.3, < 2.0.0)
+      credentials_manager (>= 0.16.2, < 1.0.0)
+      fastlane_core (>= 0.55.0, < 1.0.0)
+      security
+      sigh (>= 1.11.2, < 2.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+    memoist (0.15.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_magick (4.5.1)
+    minitest (5.9.1)
+    multi_json (1.12.1)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    nanaimo (0.2.2)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.2.0)
+    os (0.9.6)
+    pem (1.4.0)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      spaceship (>= 0.36.2, < 1.0.0)
+    pilot (1.12.0)
+      credentials_manager (>= 0.16.0)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+      terminal-table (>= 1.4.5, < 2.0.0)
+    plist (3.2.0)
+    produce (1.3.0)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      spaceship (>= 0.37.0, < 1.0.0)
+    public_suffix (2.0.4)
+    representable (2.3.0)
+      uber (~> 0.0.7)
+    retriable (2.1.0)
+    rouge (1.11.1)
+    rubyzip (1.1.7)
+    scan (0.14.1)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      slack-notifier (~> 1.3)
+      terminal-table (>= 1.4.5, < 2.0.0)
+      xcpretty (>= 0.2.4, < 1.0.0)
+      xcpretty-travis-formatter (>= 0.0.3)
+    screengrab (0.5.5)
+      fastlane_core (>= 0.52.1, < 1.0.0)
+    security (0.1.3)
+    sigh (1.11.2)
+      fastlane_core (>= 0.52.1, < 1.0.0)
+      plist (~> 3.1)
+      spaceship (>= 0.34.2, < 1.0.0)
+    signet (0.7.3)
+      addressable (~> 2.3)
+      faraday (~> 0.9)
+      jwt (~> 1.5)
+      multi_json (~> 1.10)
+    slack-notifier (1.5.1)
+    snapshot (1.16.3)
+      fastimage (~> 1.6.3)
+      fastlane_core (>= 0.53.0, < 1.0.0)
+      plist (>= 3.1.0, < 4.0.0)
+      xcpretty (>= 0.2.4, < 1.0.0)
+    spaceship (0.37.0)
+      colored
+      credentials_manager (>= 0.16.0)
+      faraday (~> 0.9)
+      faraday-cookie_jar (~> 0.0.6)
+      faraday_middleware (~> 0.9)
+      fastimage (~> 1.6)
+      multi_xml (~> 0.5)
+      plist (>= 3.1.0, < 4.0.0)
+    supply (0.7.1)
+      credentials_manager (>= 0.15.0)
+      fastlane_core (>= 0.43.4)
+      google-api-client (~> 0.9.1)
+    terminal-notifier (1.7.1)
+    terminal-table (1.4.5)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uber (0.0.15)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    word_wrap (1.0.0)
+    xcode-install (2.0.9)
+      claide (>= 0.9.1, < 1.1.0)
+      spaceship (>= 0.25.1, < 1.0.0)
+    xcodeproj (1.4.1)
+      CFPropertyList (~> 2.3.3)
+      activesupport (>= 3)
+      claide (>= 1.0.1, < 2.0)
+      colored (~> 1.2)
+      nanaimo (~> 0.2.0)
+    xcpretty (0.2.4)
+      rouge (~> 1.8)
+    xcpretty-travis-formatter (0.0.4)
+      xcpretty (~> 0.2, >= 0.0.7)
+PLATFORMS
+  ruby
+DEPENDENCIES
+  fastlane
+BUNDLED WITH
+   1.12.5
