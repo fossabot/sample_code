@@ -10,6 +10,7 @@ const menu = {
     set appetizers(appetizersIn) {
       this._appetizers = appetizersIn;
     },
+    // Hey
     get mains() {
       return this._mains;
     },
@@ -31,7 +32,7 @@ const menu = {
       desserts: this._courses.desserts,
     };
 },
-
+// hey
 returnGreat(num) {
   if (num === 5) {
     return 'This is correct.';
