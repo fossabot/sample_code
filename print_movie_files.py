@@ -25,7 +25,7 @@ def print_movie_files(movie_directory, movie_extensions=['avi', 'dat', 'mp4', 'm
                 # We have got a video file! Increment the counter
                 print_movie_files.counter += 1
 
-                # Print it's name
+                # Print it's name hey
                 print('{0}'.format(filepath))
         elif os.path.isdir(filepath):
             # We got a directory, enter into it for further processing
