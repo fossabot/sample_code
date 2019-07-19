@@ -18,7 +18,7 @@ const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weathe
 const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 // AJAX functions
-
+// hey
 async function getVenues() {
   const city = $input.val();
   const urlToFetch = `${url}${city}&venuePhotos=1&limit=4&client_id=${clientId}&client_secret=${clientSecret}&v=${getCurrentDate()}`;
@@ -47,7 +47,7 @@ function venues(venues) {
       '<p class="address">' + '<address>' + '</p>' +
       '<p class="city">' + '<city>' + '</p>' +
       '<p class="country">' + '<country>' + '</p>';
-    $venue.append(venueContent);
+    $venue.append(venueContent); // hey
   });
   $destination.append('<h3>' + venues[0].location.city + '</h3>');
 }
