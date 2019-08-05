@@ -18,6 +18,7 @@ for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   }
 }
 
+// TODO: HEY
 let wordCount = 0;
 for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   for (let badWord = 0; badWord < overusedWords.length; badWord++)
@@ -28,7 +29,7 @@ for (let eachWord = 0; eachWord < textWords.length; eachWord++) {
   }
 }
 
-
+// FIXME: YO
 let sentences = 0;
 for (let character = 0; character < text.length; character++) {
   if (text[character] === "." || text[character] === "!" || text[character] === "?") {
