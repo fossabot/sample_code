@@ -5,6 +5,10 @@ import java.util.Random;
  * All sides have uniform probablity of being rolled.
  * todo - more things
  * fixme - even more things
+ * TODO - more things
+ * TODO: more things
+ * FIXME - more things
+ * FIXME: more things
  */
 public class Die
 {   public static final int DEFAULT_SIDES = 6;
