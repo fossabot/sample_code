@@ -139,6 +139,16 @@ class billpersona extends slackbot{
 			CURLOPT_POSTFIELDS => 'payload=' . json_encode($response)
 		));
 		curl_exec($c);
+		TODO: php
+		todo: php
+		todo - php
+		TODO - php
+		FIXME: php
+		fixme: php
+		fixme - php
+		FIXME - php
+		FIXME- php
+		TODO- php
 		*/
 		$response['text'] = str_replace(array('&', '<', '>'), array('&amp;', '&lt;', '&gt;'), $response['text']);
 		$this->respond($response);
