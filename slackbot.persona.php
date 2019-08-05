@@ -1,5 +1,5 @@
 <?php
-class billpersona extends slackbot{
+class billpersona extends slackbot{ // TODO: php
 	function __construct(){
 		$this->response['username'] = 'Bill Murray';
 		$this->response['icon_emoji'] = ':classy-bill:';
@@ -14,7 +14,7 @@ class billpersona extends slackbot{
 		);
 	}
 
-	protected function _bad_command($args = array()){
+	protected function _bad_command($args = array()){ // FIXME: php
 		$_POST['func_args'] = $args;
 		$this->respond(json_encode($_POST));
 	}
@@ -31,9 +31,9 @@ class billpersona extends slackbot{
 		$this->respond('There are currently '. $json['number'] .' people in space right now.');
 	}
 	protected function _post_test(){
-		$this->respond("Line one\nLine two?");
+		$this->respond("Line one\nLine two?"); // TODO php
 	}
-	protected function _post_food($args = array()){
+	protected function _post_food($args = array()){ // FIXME php
 		$city = (empty($args[0])) ? 'ottawa' : strtolower($args[0]);
 		$c  = curl_init('data.streetfoodapp.com/1.1/schedule/' . $city . '/');
 		curl_setopt($c,CURLOPT_RETURNTRANSFER,1);
